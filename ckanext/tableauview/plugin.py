@@ -1,4 +1,3 @@
-import urlparse
 import os
 
 from logging import getLogger
@@ -22,7 +21,7 @@ class TableauView(p.SingletonPlugin):
     p.implements(p.IConfigurer, inherit=True)
 
     # IConfigurer
-    
+
     def update_config(self, config):
         p.toolkit.add_template_directory(config, 'templates')
 
@@ -56,5 +55,3 @@ class TableauView(p.SingletonPlugin):
         return {'viz_name': resource_view.get('viz_name', 'no_viz_name'),
                 'sheet_name': resource_view.get('sheet_name', 'no_sheet_name'),
                 }
-
-
