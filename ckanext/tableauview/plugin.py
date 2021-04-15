@@ -2,8 +2,7 @@ import os
 
 from logging import getLogger
 
-from pylons import config
-from ckan.common import json
+from ckan.common import config, json
 
 from ckan import plugins as p
 import ckan.lib.helpers as h
